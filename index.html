@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bunz – Handcrafted Buns in Barrhaven, Ottawa</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ── NAV ── -->
+  <header class="nav">
+    <div class="nav__logo">Bunz</div>
+    <nav class="nav__links">
+      <a href="#menu">Menu</a>
+      <a href="#instagram">Gallery</a>
+      <a href="#order" class="btn btn--nav">Pre-order</a>
+    </nav>
+    <button class="nav__burger" aria-label="Open menu">&#9776;</button>
+  </header>
+
+  <!-- ── HERO ── -->
+  <section class="hero">
+    <div class="hero__blob blob1"></div>
+    <div class="hero__blob blob2"></div>
+    <div class="hero__content">
+      <p class="hero__eyebrow">Handcrafted in Barrhaven, Ottawa</p>
+      <h1 class="hero__title">Bunz</h1>
+      <p class="hero__sub">Fresh-baked, made-to-order bunz &amp; focaccia.<br>Pick up for free in Barrhaven — 24 h notice required.</p>
+      <div class="hero__cta">
+        <a href="#order" class="btn btn--primary">Pre-order Now</a>
+        <a href="#menu" class="btn btn--ghost">See Menu</a>
+      </div>
+    </div>
+    <div class="hero__donuts" aria-hidden="true">
+      <span class="donut d1">🍩</span>
+      <span class="donut d2">🍩</span>
+      <span class="donut d3">🍩</span>
+    </div>
+  </section>
+
+  <!-- ── BADGES ── -->
+  <section class="badges">
+    <div class="badge"><span>🏠</span> Free pick-up · Barrhaven</div>
+    <div class="badge"><span>⏰</span> 24 h advance notice</div>
+    <div class="badge"><span>✉️</span> Custom orders by email</div>
+    <div class="badge"><span>🍁</span> Ottawa-made</div>
+  </section>
+
+  <!-- ── MENU ── -->
+  <section class="menu section" id="menu">
+    <div class="container">
+      <h2 class="section__title">Our Menu</h2>
+      <p class="section__sub">All bunz are baked fresh per order. Prices in CAD.</p>
+
+      <div class="menu__grid">
+
+        <div class="menu__card">
+          <div class="menu__card-header">
+            <h3>Dozen</h3>
+            <span class="menu__tag">12 bunz</span>
+          </div>
+          <ul>
+            <li><span>Classic</span><span class="price">$50</span></li>
+            <li><span>Maple Pecan</span><span class="price">$60</span></li>
+            <li><span>Mix</span><span class="price">$55</span></li>
+          </ul>
+        </div>
+
+        <div class="menu__card">
+          <div class="menu__card-header">
+            <h3>½ Dozen</h3>
+            <span class="menu__tag">6 bunz</span>
+          </div>
+          <ul>
+            <li><span>Classic</span><span class="price">$25</span></li>
+            <li><span>Maple Pecan</span><span class="price">$35</span></li>
+            <li><span>Mix</span><span class="price">$30</span></li>
+          </ul>
+        </div>
+
+        <div class="menu__card">
+          <div class="menu__card-header">
+            <h3>36 Mini Bunz</h3>
+            <span class="menu__tag">bite-size</span>
+          </div>
+          <ul>
+            <li><span>Classic</span><span class="price">$30</span></li>
+          </ul>
+        </div>
+
+        <div class="menu__card">
+          <div class="menu__card-header">
+            <h3>Focaccia</h3>
+            <span class="menu__tag">savory / sweet</span>
+          </div>
+          <ul>
+            <li><span>Cinnamon <small style="color:var(--text-muted);font-weight:600">(9×13)</small></span><span class="price">$25</span></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="topping-banner">
+        <span class="topping-banner__icon">✨</span>
+        <div>
+          <strong>Optional Topping: Biscoff</strong>
+          <p>Add a Biscoff drizzle to any order — just mention it in your order notes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PRE-ORDER FORM ── -->
+  <section class="order section" id="order">
+    <div class="container order__wrap">
+      <div class="order__info">
+        <h2 class="section__title">Pre-order</h2>
+        <p>All orders require <strong>24 hours advance notice</strong>. Fill in the form and we'll confirm by email or DM.</p>
+        <ul class="order__bullets">
+          <li>🏠 Free pick-up in Barrhaven</li>
+          <li>🎨 Custom orders? Email us directly</li>
+          <li>✨ Add Biscoff topping in the notes</li>
+          <li>🍁 Ottawa-baked with love</li>
+        </ul>
+      </div>
+
+      <form class="order__form" id="orderForm" novalidate>
+        <div class="form__row">
+          <label for="name">Name *</label>
+          <input type="text" id="name" name="name" placeholder="Your full name" required />
+        </div>
+
+        <div class="form__row">
+          <label for="email">Email *</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required />
+        </div>
+
+        <div class="form__row">
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" name="phone" placeholder="613-xxx-xxxx" />
+        </div>
+
+        <div class="form__row">
+          <label for="pickup">Preferred pick-up date *</label>
+          <input type="date" id="pickup" name="pickup" required />
+        </div>
+
+        <fieldset class="form__fieldset">
+          <legend>What would you like? *</legend>
+
+          <div class="form__check-row">
+            <label><input type="checkbox" name="item" value="Dozen Classic – $50" /> Dozen Classic <span class="price">$50</span></label>
+            <label><input type="checkbox" name="item" value="Dozen Maple Pecan – $60" /> Dozen Maple Pecan <span class="price">$60</span></label>
+            <label><input type="checkbox" name="item" value="Dozen Mix – $55" /> Dozen Mix <span class="price">$55</span></label>
+            <label><input type="checkbox" name="item" value="1/2 Dozen Classic – $25" /> ½ Dozen Classic <span class="price">$25</span></label>
+            <label><input type="checkbox" name="item" value="1/2 Dozen Maple Pecan – $35" /> ½ Dozen Maple Pecan <span class="price">$35</span></label>
+            <label><input type="checkbox" name="item" value="1/2 Dozen Mix – $30" /> ½ Dozen Mix <span class="price">$30</span></label>
+            <label><input type="checkbox" name="item" value="36 Mini Bunz Classic – $30" /> 36 Mini Bunz Classic <span class="price">$30</span></label>
+            <label><input type="checkbox" name="item" value="Focaccia Cinnamon – $25" /> Focaccia Cinnamon <span class="price">$25</span></label>
+          </div>
+        </fieldset>
+
+        <div class="form__row">
+          <label for="notes">Notes (toppings, allergies, custom requests…)</label>
+          <textarea id="notes" name="notes" rows="3" placeholder="e.g. Add Biscoff topping, nut allergy…"></textarea>
+        </div>
+
+        <div class="order__total" id="orderTotal" style="display:none">
+          Estimated total: <strong id="totalAmt">$0</strong>
+        </div>
+
+        <button type="submit" class="btn btn--primary btn--full">Send Pre-order Request</button>
+        <p class="form__note">We'll reply within a few hours to confirm your order. For custom orders, email us directly.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ── SUCCESS MODAL ── -->
+  <div class="modal" id="successModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+    <div class="modal__box">
+      <div class="modal__icon">🍩</div>
+      <h3 id="modalTitle">Order request sent!</h3>
+      <p>Thank you! We'll confirm your Bunz order within a few hours. See you in Barrhaven ✨</p>
+      <button class="btn btn--primary" id="closeModal">Sounds good!</button>
+    </div>
+  </div>
+  <div class="modal__overlay" id="modalOverlay" hidden></div>
+
+  <!-- ── INSTAGRAM GRID ── -->
+  <section class="instagram section" id="instagram">
+    <div class="container">
+      <h2 class="section__title">As Seen on Instagram</h2>
+      <p class="section__sub">
+        <a href="https://www.instagram.com/bunz.ott" target="_blank" rel="noopener" class="ig-handle">@bunz.ott</a>
+        &nbsp;·&nbsp; DM to order &nbsp;·&nbsp; 2,400 followers
+      </p>
+
+      <div class="ig-grid">
+
+        <!-- ── Paste real Instagram embed codes below.
+             To get one: open any post → ··· → Embed → copy the <blockquote> block.
+             Replace each placeholder blockquote with the real one. ── -->
+
+        <div class="ig-embed-wrap">
+          <blockquote class="instagram-media"
+            data-instgrm-permalink="https://www.instagram.com/bunz.ott/"
+            data-instgrm-version="14">
+            <a href="https://www.instagram.com/bunz.ott/">View on Instagram</a>
+          </blockquote>
+        </div>
+
+        <div class="ig-embed-wrap">
+          <blockquote class="instagram-media"
+            data-instgrm-permalink="https://www.instagram.com/bunz.ott/"
+            data-instgrm-version="14">
+            <a href="https://www.instagram.com/bunz.ott/">View on Instagram</a>
+          </blockquote>
+        </div>
+
+        <div class="ig-embed-wrap">
+          <blockquote class="instagram-media"
+            data-instgrm-permalink="https://www.instagram.com/bunz.ott/"
+            data-instgrm-version="14">
+            <a href="https://www.instagram.com/bunz.ott/">View on Instagram</a>
+          </blockquote>
+        </div>
+
+        <div class="ig-embed-wrap">
+          <blockquote class="instagram-media"
+            data-instgrm-permalink="https://www.instagram.com/bunz.ott/"
+            data-instgrm-version="14">
+            <a href="https://www.instagram.com/bunz.ott/">View on Instagram</a>
+          </blockquote>
+        </div>
+
+        <div class="ig-embed-wrap">
+          <blockquote class="instagram-media"
+            data-instgrm-permalink="https://www.instagram.com/bunz.ott/"
+            data-instgrm-version="14">
+            <a href="https://www.instagram.com/bunz.ott/">View on Instagram</a>
+          </blockquote>
+        </div>
+
+        <div class="ig-embed-wrap">
+          <blockquote class="instagram-media"
+            data-instgrm-permalink="https://www.instagram.com/bunz.ott/"
+            data-instgrm-version="14">
+            <a href="https://www.instagram.com/bunz.ott/">View on Instagram</a>
+          </blockquote>
+        </div>
+
+      </div>
+
+      <div style="text-align:center;margin-top:2rem">
+        <a href="https://www.instagram.com/bunz.ott" target="_blank" rel="noopener" class="btn btn--primary">
+          See All Posts on Instagram
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <script async src="//www.instagram.com/embed.js"></script>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer">
+    <div class="footer__logo">Bunz</div>
+    <p>Handcrafted buns · Barrhaven, Ottawa, ON</p>
+    <p>Free pick-up · 24 h advance notice · Custom orders by email</p>
+    <a href="https://www.instagram.com/bunz.ott" target="_blank" rel="noopener" class="footer__ig">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+      @bunz.ott
+    </a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
